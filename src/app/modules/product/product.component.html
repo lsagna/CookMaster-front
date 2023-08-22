@@ -1,0 +1,22 @@
+<div class="container">
+	<mat-card>
+		<div class="justify-content-between">
+			<div class="other">
+				<img width="300" height="300" src="{{currentImage}}" alt="">
+				<div class="justify-content-center">	
+					<img *ngFor="let item of currentProduct.images" (mouseenter)="updateImage(item)" width="50" height="50" src="{{item}}" alt="">
+				</div>
+			</div>
+			<div class="info">
+				<h1>{{ currentProduct.name }}</h1>
+				<p>{{ currentProduct.creator.lastname }}</p>
+				<p>{{ currentProduct.description }}</p>
+			</div>
+			<div class="other">
+				<h2>{{ currentProduct.price }} €</h2>
+				<p>Disponible</p>
+				<button mat-flat-button (click)="addToCart(currentProduct.id)">Ajouter au panier</button>
+			</div>
+		</div>
+	</mat-card>
+</div>

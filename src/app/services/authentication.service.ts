@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { DecodedToken } from '../models/decoded-token.model';
@@ -16,7 +15,6 @@ import { User } from '../models/user.model';
 export class AuthenticationService {
 	decodedToken = {} as DecodedToken;
 	constructor(
-		private readonly http: HttpClient,
 		private readonly authenticationController: AuthenticationController,
 		private readonly router: Router
 	) {

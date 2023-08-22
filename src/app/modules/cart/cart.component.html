@@ -1,0 +1,36 @@
+<div>
+	<h1 class="text-center">Votre panier</h1>
+	<ng-container *ngIf="isCartEmpty; else cartFull">
+		<div class="text-center">
+			<h1>Vous n'avez pas d'articles dans votre panier !</h1>
+			<button mat-flat-button>Vers le magasin</button>
+		</div>
+	</ng-container>
+	<div class="justify-content-center">
+		<button mat-button class="w-50">Valider le panier</button>
+	</div>
+</div>
+
+<ng-template #cartFull>
+	<div>
+		<mat-card *ngFor="let item of cartItems">
+			<div class="justify-content-center">
+				<div>
+					<img width="80" height="80" src="assets/img/user.png" alt="">
+				</div>
+				<div class="spacer"></div>
+				<div class="info">
+					<h1>{{item.item.name}}</h1>
+					<p>{{item.item.description}}</p>
+					<div class="justify-content-between">
+						<button mat-flat-button (click)="deleteItem(item.item.id)">Supprimer</button>
+						<p class="text-end">Quantité: {{item.quantity}}</p>
+					</div>
+				</div>
+				<div class="spacer"></div>
+				<div class="other">{{item.item.price}} €</div>
+			</div>
+		</mat-card>
+		<p class="text-end">Sous-total ({{cartItems.length}} articles): {{total}} €</p>
+	</div>
+</ng-template>

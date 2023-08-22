@@ -21,6 +21,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatPaginatorModule } from '@angular/material/paginator'
 
 @NgModule({
 	declarations: [	],
@@ -48,6 +49,7 @@ import { MatRadioModule } from '@angular/material/radio';
 		MatDialogModule,
 		MatNativeDateModule,
 		MatRadioModule,
+		MatPaginatorModule,
 	],
 	providers: []
 })

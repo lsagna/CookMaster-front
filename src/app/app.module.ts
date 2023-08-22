@@ -6,6 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ShopModule } from './modules/shop/shop.module';
+import { ProductModule } from './modules/product/product.module';
+import { CartModule } from './modules/cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
 	MaterialModule,
 	AuthenticationModule,
+	ShopModule,
+	ProductModule,
+	CartModule,
 	HttpClientModule
   ],
   providers: [],

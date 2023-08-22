@@ -1,0 +1,28 @@
+<mat-drawer-container>
+	<mat-drawer #drawer>
+		<p>#TODO filtres</p>
+	</mat-drawer>
+	<mat-toolbar>
+		<button mat-flat-button (click)="drawer.toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+	</mat-toolbar>
+
+	<mat-grid-list [cols]="4"
+	gutterSize="15px">
+		<mat-grid-tile *ngFor="let item of allProducts">
+			<mat-card (click)="onProductClick(item)">
+				<img src="{{item.images[0] ? item.images[0] : 'assets/img/logo_mastercook.svg'}}" alt="">
+				<mat-card-content>
+					<mat-card-title>{{item.name}}</mat-card-title>
+					<p>{{item.description}}</p>
+					<!--<p>{{item.creator.lastname}}</p>-->
+					<p>{{item.price}} €</p>
+				</mat-card-content>
+			</mat-card>
+		</mat-grid-tile>
+	</mat-grid-list>
+	<mat-paginator [length]="10"
+	[pageSize]="5">
+	</mat-paginator>
+</mat-drawer-container>
