@@ -1,0 +1,19 @@
+<div class="justify-content-center" #subMenu>
+	<mat-toolbar>
+	
+	</mat-toolbar>
+</div>
+<mat-grid-list [cols]="4"
+	gutterSize="15px">
+	<mat-grid-tile *ngFor="let course of coursesList">
+		<mat-card (click)="onCourseClick(course)">
+			<img src="{{course.frontImage ? course.frontImage : 'assets/img/logo_mastercook.svg'}}" alt="">
+			<mat-card-content>
+				<mat-card-title>{{course.title}}</mat-card-title>
+			</mat-card-content>
+		</mat-card>
+	</mat-grid-tile>
+</mat-grid-list>
+<mat-paginator [length]="10"
+	[pageSize]="5">
+</mat-paginator>

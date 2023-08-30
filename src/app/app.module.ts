@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CoursesListModule } from './modules/courses-list/courses-list.module';
+import { CoursesModule } from './modules/courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
 	MaterialModule,
 	AuthenticationModule,
+	CoursesListModule,
+	CoursesModule,
 	HttpClientModule
   ],
   providers: [],

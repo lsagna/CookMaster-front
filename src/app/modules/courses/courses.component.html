@@ -1,1 +1,12 @@
 <p>courses works!</p>
+<div>
+	<h1>{{ currentCourse.title }}</h1>
+</div>
+<div>
+	<div *ngFor="let item of currentCourse.content">
+		<h2>{{ item.sectionTitle }}</h2>
+		<img *ngIf="item.sectionImage" src="{{item.sectionImage}}" alt="">
+		<p>{{ item.sectionText }}</p>
+	</div>
+	<p class="justify-content-end">{{ currentCourse.createDate }}</p>
+</div>
