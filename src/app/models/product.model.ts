@@ -12,7 +12,7 @@ export interface Product {
 	stock: number;
 	startTime: Date|null;
 	duration: Date|null;
-	address: Address|null;
+	adress: Address|null;
 }
 
 export interface CartItem {

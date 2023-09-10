@@ -7,7 +7,7 @@
 		</div>
 	</ng-container>
 	<div class="justify-content-center">
-		<button mat-button class="w-50">Valider le panier</button>
+		<button mat-flat-button color="primary" mat-button class="w-50">Valider le panier</button>
 	</div>
 </div>
 
@@ -23,8 +23,10 @@
 					<h1>{{item.item.name}}</h1>
 					<p>{{item.item.description}}</p>
 					<div class="justify-content-between">
-						<button mat-flat-button (click)="deleteItem(item.item.id)">Supprimer</button>
-						<p class="text-end">Quantité: {{item.quantity}}</p>
+						<button mat-flat-button color="warn" (click)="deleteItem(item.item.id)">
+							<mat-icon>delete</mat-icon>
+						</button>
+						<p class="text-end">Quantité: <mat-select>{{item.quantity}}</mat-select></p>
 					</div>
 				</div>
 				<div class="spacer"></div>

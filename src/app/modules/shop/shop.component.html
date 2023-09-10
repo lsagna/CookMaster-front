@@ -8,7 +8,7 @@
 		</button>
 	</mat-toolbar>
 
-	<mat-grid-list [cols]="4"
+	<mat-grid-list class="main-view" [cols]="4" rowHeight="400px"
 	gutterSize="15px">
 		<mat-grid-tile *ngFor="let item of allProducts">
 			<mat-card (click)="onProductClick(item)">
@@ -17,7 +17,7 @@
 					<mat-card-title>{{item.name}}</mat-card-title>
 					<p>{{item.description}}</p>
 					<!--<p>{{item.creator.lastname}}</p>-->
-					<p>{{item.price}} €</p>
+					<p class="justify-content-end">{{item.price}} €</p>
 				</mat-card-content>
 			</mat-card>
 		</mat-grid-tile>

@@ -1,32 +1,34 @@
 <!-- Toolbar -->
-<header>
-	<div class="toolbar" role="banner">
-		<img
-		  width="40"
-		  alt="MC Logo"
-		  src="assets/img/logo_mastercook.svg"
-		  routerLink="/"
-		/>
-		<span routerLink="/">Welcome to CookMaster</span>
-		<div class="spacer"></div>
-		<button mat-flat-button routerLink="/shop">Magasin</button> 
-		<button mat-flat-button>Cours</button> 
-		<button mat-flat-button>À propos</button> 
-		<button mat-flat-button>Nous contacter</button>
-		<ng-container *ngIf="!isLogged">	
-			<button mat-flat-button routerLink="/auth">Connexion</button> 
-		</ng-container> 
-		<button mat-flat-button routerLink="/cart">Panier</button>
-	  </div>
-</header>
-
-<div class="top container">
-	<router-outlet></router-outlet>
-</div>
-
-<footer>
+<div class="background">
+	<header>
+		<div class="toolbar" role="banner">
+			<img
+			  width="40"
+			  alt="MC Logo"
+			  src="assets/img/logo_mastercook.svg"
+			  routerLink="/"
+			/>
+			<span routerLink="/">Welcome to CookMaster</span>
+			<div class="spacer"></div>
+			<button mat-flat-button routerLink="/shop">Magasin</button> 
+			<button mat-flat-button>Cours</button> 
+			<button mat-flat-button>À propos</button> 
+			<button mat-flat-button>Nous contacter</button>
+			<ng-container *ngIf="!isLogged else logged">	
+				<button mat-flat-button routerLink="/auth">Connexion</button> 
+			</ng-container> 
+			<button mat-flat-button routerLink="/cart">Panier</button>
+		  </div>
+	</header>
 	
-</footer>
+	<div class="top container">
+		<router-outlet></router-outlet>
+	</div>
+	
+	<footer>
+		
+	</footer>	
+</div>
 
 <ng-template #logged>
 	<button mat-image-button>
