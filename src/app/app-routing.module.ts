@@ -4,11 +4,16 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { ShopComponent } from './modules/shop/shop.component';
 import { ProductComponent } from './modules/product/product.component';
 import { CartComponent } from './modules/cart/cart.component';
+import { AccountComponent } from './modules/account/account.component';
 
 const routes: Routes = [
 	{
 		path: 'auth',
 		component: AuthenticationComponent,
+	},
+	{
+		path: 'account',
+		component: AccountComponent,
 	},
 	{
 		path: 'shop',

@@ -1,6 +1,6 @@
 <div class="container" *ngIf="currentProduct">
 	<mat-card>
-		<ng-container *ngIf="(isEvent); else event">
+		<ng-container *ngIf="currentProduct.type === productEnum.PRODUCT; else event">
 			<div class="justify-content-center">
 				<div class="other">
 					<img width="300" height="300" src="{{currentImage}}" alt="">

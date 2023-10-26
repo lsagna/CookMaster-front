@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShopModule } from './modules/shop/shop.module';
 import { ProductModule } from './modules/product/product.module';
 import { CartModule } from './modules/cart/cart.module';
+import { SharedModule } from './modules/shared/shared.module';
+import { AccountModule } from './modules/account/account.module';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { CartModule } from './modules/cart/cart.module';
     BrowserAnimationsModule,
 	MaterialModule,
 	AuthenticationModule,
+	AccountModule,
 	ShopModule,
 	ProductModule,
 	CartModule,
-	HttpClientModule
+	HttpClientModule,
+	SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

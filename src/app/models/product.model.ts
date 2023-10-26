@@ -21,6 +21,6 @@ export interface CartItem {
 }
 
 export enum ProductType {
-	MATERIAL = 'MATERIAL',
+	PRODUCT = 'PRODUCT',
 	EVENT = 'EVENT'
 }

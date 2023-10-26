@@ -11,7 +11,7 @@ import { ProductsService } from 'src/app/services/poducts.service';
 })
 export class ProductComponent implements OnInit {
 
-  isEvent = false;
+  productEnum = ProductType;
   currentProduct?: Product;
   creator?: User;
   currentImage = "assets/img/logo_mastercook.svg";
@@ -31,22 +31,15 @@ export class ProductComponent implements OnInit {
 			this.currentProduct.images.push('assets/img/user.png');
 			this.currentProduct.images.push('assets/img/logo_mastercook.svg');
 			this.currentProduct.images.push('assets/img/logo_mastercook.svg');
-			this.creator!.lastname = "company" ?? null;
-			this.currentProduct.creator = this.creator!;
-			
-			if (this.currentProduct && this.currentProduct.type == ProductType.EVENT) {
-				this.isEvent = true;
-			}	
+			//this.creator!.lastname = "company" ?? null;
+			//this.currentProduct.creator = this.creator!;
 			console.log(this.currentProduct);
+
 		},
 		error: (error) => {
 			console.error(error);
 		}
-	})
-	if (this.currentProduct && this.currentProduct.type == ProductType.EVENT) {
-		this.isEvent = true;
-	}
-	console.log(this.currentProduct);
+	});
   }
 
   updateImage(url: string) {
